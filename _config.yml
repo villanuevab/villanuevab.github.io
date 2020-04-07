@@ -6,8 +6,8 @@ url: villanuevab.github.io # the base hostname & protocol for your site, e.g. ht
 twitter_username: _bicv
 github_username:  villanuevab
 
-source      : ./
-destination : ./_site
+source      : / 
+destination : /_site
 
 # Sass configuration
 sass:
