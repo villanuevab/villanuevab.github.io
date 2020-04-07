@@ -1,0 +1,21 @@
+<nav class="nav">
+  <div class="container">
+    <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+    <ul class="navbar">
+    {% for blanca in site.data.menu %}
+        {% if blanca.subcategories != null %}
+        <li><a href="{{ blanca.href }}" class="page-link">{{ blanca.title }}</a>
+        <ul class="sub-menu">
+        {% for subcategory in blanca.subcategories %}
+        <li><a href="{{ subcategory.subhref }}">{{ subcategory.subtitle }}</a></li>
+        {% endfor %}
+        </ul>
+        {% else %}
+         <li><a href="{{ blanca.href }}" class="page-link">{{ blanca.title }}</a>
+        {% endif %}
+        </li>
+        {% endfor %}
+        </ul>
+    </ul>
+  </div>
+</nav>
