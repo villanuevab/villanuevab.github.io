@@ -7,13 +7,13 @@
   {% assign page_title = '' %}
   {% if page.title == "Home" %}
       {% capture page_title %}
-        {{ site.title_left }}{{ site.title_right }} | {{ site.description }}
+        {{ site.title_left }} {{ site.title_right }} | {{ site.description }}
         {%if paginator and paginator.page != 1 %} - {{ paginator.page }}{% endif %}
       {% endcapture %}
   {% else %}
       {% capture page_title %}
           {%if page.slug == 'category' %}Category: {% endif %}
-          {%if page.slug == 'tag' %}Tag: {% endif %} {{ page.title }} | {{ site.title_left }}{{ site.title_right }}
+          {%if page.slug == 'tag' %}Tag: {% endif %} {{ page.title }} | {{ site.title_left }} {{ site.title_right }}
       {% endcapture %}
   {% endif %}
   {% capture page_title %}
